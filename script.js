@@ -7,8 +7,8 @@ new Vue({
         navigateToSurprise() {
             this.surpriseClicked = true;
             setTimeout(() => {
-                window.location.href = 'surprise.html'; // Redirect ke halaman surprise
-            }, 2000); // Tunggu 2 detik
+                window.location.href = 'surprise.html';
+            }, 2000);
         }
     }
 });
