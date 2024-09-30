@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Sayang!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div id="app" :class="{'neon-mode': !surpriseClicked}" class="transition-all duration-500 relative min-h-screen">
+        <div class="container mx-auto min-h-screen flex flex-col justify-center items-center text-center relative">
+            <h1 :class="{'text-neon-pink animate-glow': !surpriseClicked}"
+                class="text-6xl sm:text-8xl font-extrabold tracking-widest">
+                Happy Birthday, Sayang!
+            </h1>
+            <p :class="{'text-neon-pink animate-glow-delayed': !surpriseClicked}"
+               class="mt-6 text-2xl sm:text-3xl font-light tracking-wide">
+                Aku sangat mencintaimu 💖
+            </p>
+
+            <div class="mt-12">
+                <button @click="navigateToSurprise" 
+                        class="px-8 py-4 bg-neon-pink text-black font-bold rounded-full shadow-lg hover:bg-pink-500 hover:shadow-pink-500 transition duration-300">
+                    Klik untuk Kejutan
+                </button>
+            </div>
+
+            <div id="balloon-container" class="absolute inset-0 overflow-hidden">
+                <div v-if="surpriseClicked" v-for="balloon in 5" :key="balloon" class="balloon"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
