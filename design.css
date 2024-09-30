@@ -31,8 +31,6 @@ body {
 .animate-glow-delayed {
     animation: glow 3s ease-in-out infinite;
 }
-
-/* Balloons */
 .balloon {
     position: absolute;
     bottom: -200px;
@@ -54,13 +52,12 @@ body {
     background-color: rgba(255, 192, 203, 0.9);
 }
 
-/* Responsif untuk tampilan foto di halaman kedua */
 @media (max-width: 768px) {
     .container {
         padding: 2rem;
     }
 }
 #balloon-container {
-    z-index: -1; /* Membuat balon di belakang konten utama */
+    z-index: -1;
     overflow: hidden;
 }
